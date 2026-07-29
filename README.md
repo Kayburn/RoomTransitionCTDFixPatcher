@@ -5,7 +5,7 @@ A [Synthesis](https://github.com/Noggog/Synthesis) patcher for Skyrim SE that fi
 scene is active or closing nearby - typically triggered by ambient addons like OStim NPCs or OSolo, where the player
 isn't part of the scene and can move freely.
 
-This is the Synthesis version of the ["OStim NPC / OSolo - Room Transition CTD Fix"](https://www.nexusmods.com/skyrimspecialedition)
+This is the Synthesis version of the ["OStim NPC / OSolo - Room Transition CTD Fix"](https://www.nexusmods.com/skyrimspecialedition/mods/186626)
 Advanced Patcher (originally an xEdit script), rebuilt to run automatically as part of your Synthesis pipeline instead
 of requiring a manual xEdit pass.
 
