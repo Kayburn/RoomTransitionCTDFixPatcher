@@ -24,8 +24,8 @@ Everything is written as overrides into your own Synthesis patch - it never touc
 
 ## Requirements
 
-- [OStim NPC / OSolo - Room Transition CTD Fix](https://www.nexusmods.com/skyrimspecialedition) (base mod, provides
-  the compiled `OStimCellTransitionCrashFix.pex` script this patcher attaches)
+- [OStim NPC / OSolo - Room Transition CTD Fix](https://www.nexusmods.com/skyrimspecialedition/mods/186626) (base mod,
+  provides the compiled `OStimCellTransitionCrashFix.pex` script this patcher attaches)
 - [OStim Standalone](https://www.nexusmods.com/skyrimspecialedition/mods/98163)
 
 ## Installation
