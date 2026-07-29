@@ -1,0 +1,11 @@
+{
+  "Nickname": "Room Transition CTD Fix",
+  "Visibility": "Visible",
+  "OneLineDescription": "Attaches a crash-fix script to every teleport door in your load order to prevent the OStim room-transition CTD.",
+  "LongDescription": "Fixes a confirmed CTD in OStim.dll (Threading::ThreadManager::stopThreadNoLock) that occurs when the player crosses a teleport door while an OStim scene is active or closing nearby - typically triggered by ambient addons like OStim NPCs or OSolo. Scans every placed door reference with teleport data (XTEL) in your full load order and attaches the OStimCellTransitionCrashFix Papyrus script via VMAD, so it stops any active OStim threads before letting the transition happen. Requires the OStim NPC / OSolo - Room Transition CTD Fix base mod for the script itself.",
+  "PreferredAutoVersioning": "Default",
+  "RequiredMods": [],
+  "TargetedReleases": [
+    "SkyrimSE"
+  ]
+}
