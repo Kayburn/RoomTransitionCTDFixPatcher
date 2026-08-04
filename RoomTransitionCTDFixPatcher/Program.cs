@@ -69,16 +69,24 @@ namespace RoomTransitionCTDFixPatcher
                 Console.WriteLine($"Registros con error (omitidos): {errorCount} - detalle en {errorLogPath}");
             }
 
-            int nameCleared = 0;
+            int nameTouched = 0;
             foreach (var cell in state.PatchMod.EnumerateMajorRecords<Cell>())
             {
-                if (cell.Name is not null) { cell.Name = null; nameCleared++; }
+                if (cell.Name?.String is string s)
+                {
+                    cell.Name = new Mutagen.Bethesda.Strings.TranslatedString(Mutagen.Bethesda.Strings.Language.English, s);
+                    nameTouched++;
+                }
             }
             foreach (var worldspace in state.PatchMod.EnumerateMajorRecords<Worldspace>())
             {
-                if (worldspace.Name is not null) { worldspace.Name = null; nameCleared++; }
+                if (worldspace.Name?.String is string s)
+                {
+                    worldspace.Name = new Mutagen.Bethesda.Strings.TranslatedString(Mutagen.Bethesda.Strings.Language.English, s);
+                    nameTouched++;
+                }
             }
-            Console.WriteLine($"Nombres de celda/worldspace limpiados (evita forzar idioma): {nameCleared}");
+            Console.WriteLine($"Nombres de celda/worldspace re-escritos (mismo valor, forzando el registro): {nameTouched}");
         }
     }
 }
